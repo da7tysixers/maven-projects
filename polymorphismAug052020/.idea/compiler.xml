@@ -6,15 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="compositionAug052020" />
         <module name="polymorphismAug052020" />
-        <module name="maven-java-fundamental" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="compositionAug052020" target="1.5" />
-      <module name="maven-java-fundamental" target="1.5" />
-      <module name="polymorphismAug052020" target="1.5" />
-    </bytecodeTargetLevel>
   </component>
 </project>

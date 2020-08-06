@@ -5,6 +5,7 @@
       <list>
         <option value="$PROJECT_DIR$/maven-java-fundamental/pom.xml" />
         <option value="$PROJECT_DIR$/compositionAug052020/pom.xml" />
+        <option value="$PROJECT_DIR$/polymorphismAug052020/pom.xml" />
       </list>
     </option>
   </component>
