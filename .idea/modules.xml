@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/compositionAug052020/compositionAug052020.iml" filepath="$PROJECT_DIR$/compositionAug052020/compositionAug052020.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven-java-fundamental/maven-java-fundamental.iml" filepath="$PROJECT_DIR$/maven-java-fundamental/maven-java-fundamental.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/maven-projects.iml" filepath="$PROJECT_DIR$/.idea/maven-projects.iml" />
+    </modules>
+  </component>
+</project>
