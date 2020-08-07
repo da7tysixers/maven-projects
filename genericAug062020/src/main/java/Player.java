@@ -1,7 +1,7 @@
  abstract public class Player {
     private String teamName;
 
-     public Sports(String teamName) {
+     public Player(String teamName) {
          this.teamName = teamName;
      }
 
@@ -9,5 +9,5 @@
          return teamName;
      }
 
-   
+
  }

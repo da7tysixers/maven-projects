@@ -1,4 +1,7 @@
-package PACKAGE_NAME;
 
-public class Soccer {
+
+public class Soccer extends Player {
+    public Soccer(String teamName) {
+        super(teamName);
+    }
 }

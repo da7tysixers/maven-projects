@@ -1,4 +1,9 @@
-package PACKAGE_NAME;
 
-public class Basketball {
+
+public class Basketball extends Player {
+
+    public Basketball(String teamName) {
+        super(teamName);
+    }
+
 }
