@@ -33,8 +33,10 @@ class CountDown{
 
 
         }
-        for (index = 10; index > 0 ; index--) {
-            System.out.println(color + Thread.currentThread().getName() + ": i = " + index);
+        synchronized (this) {
+            for (index = 10; index > 0; index--) {
+                System.out.println(color + Thread.currentThread().getName() + ": i = " + index);
+            }
         }
     }
 }
