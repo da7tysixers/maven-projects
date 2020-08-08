@@ -17,7 +17,14 @@ public class MainApplication {
 
         lakers.matchResult(clippers, 99, 85);
         clippers.matchResult(lakers, 103, 102);
+        lakers.matchResult(clippers, 100, 120);
 
+        System.out.println(lakers.rankingTeam() + " " + lakers.getName());
+        System.out.println(clippers.rankingTeam() + " " + clippers.getName());
+        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++");
+
+        League<Team> baskball = new League<Team>("Thunder");
+        System.out.println(lakers.compareTo(clippers));
 
     }
 }
