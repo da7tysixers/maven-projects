@@ -14,7 +14,8 @@ public class MyThread extends Thread {
         try{
             Thread.sleep(3000);
         }catch (InterruptedException e){
-            throw new RuntimeException(e + "Error at runtime" + ThreadColor.ANSI_BLUE);
+            System.out.println(ThreadColor.ANSI_BLUE +"Another Thread woke me up");
+            return;
         }
 
         System.out.println(ThreadColor.ANSI_BLUE + "three seconds have passed and i'm awake");
