@@ -20,7 +20,7 @@ public class MainApplication {
             public void run() {
                 System.out.println(ThreadColor.ANSI_RED + "Hello from anonymous class red");
                 try {
-                    myTread.join();
+                    myTread.join(2000);
                     System.out.println("waiting for myTread() to join");
                 }catch (InterruptedException e){
                     System.out.println("Thread got interrupted");
