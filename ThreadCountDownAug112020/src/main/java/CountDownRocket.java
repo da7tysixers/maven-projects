@@ -1,16 +1,12 @@
 
 
 public class CountDownRocket extends Thread {
-    private int count;
     private static final String ANSI_BLUE = "\u001B[34m";
 
-    public CountDownRocket(int count) {
-        this.count = count;
-    }
 
     @Override
     public void run() {
-        for (int i = count; i >= 0 ; i--) {
+        for (int i = 20; i >= 0 ; i--) {
             System.out.printf(ANSI_BLUE + "Countdown to rocket lunch %d\n", i);
             try {
                 Thread.sleep(1000);
