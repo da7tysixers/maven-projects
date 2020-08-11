@@ -7,15 +7,30 @@ package com.orubele;
 
 public class MainApplication {
     public static void main(String[] args) {
-        Politeperson person = new Politeperson("Sam");
-        person.sayHello(person);
-        person.sayHelloBack(person);
+        final PolitePerson sam = new PolitePerson("Sam");
+        final PolitePerson jane = new PolitePerson("jane");
+
+
+        new Thread(new Runnable(){
+            @Override
+            public void run() {
+                jane.sayHello(sam);
+            }
+        }).start();
+
+        new Thread(new Runnable(){
+            @Override
+            public void run() {
+                sam.sayHello(jane);
+            }
+        }).start();
+
     }
 
-    static class Politeperson{
+    static class PolitePerson{
         private final String name;
 
-        public Politeperson(String name) {
+        public PolitePerson(String name) {
             this.name = name;
         }
 
@@ -23,11 +38,12 @@ public class MainApplication {
             return name;
         }
 
-        public synchronized void  sayHello(Politeperson person){
+        public synchronized void  sayHello(PolitePerson person){
             System.out.format("%s: %s " + "has said hello to me! %n", this.name, person.getName() );
+            person.sayHelloBack(this);
         }
 
-        public synchronized void sayHelloBack(Politeperson person){
+        public synchronized void sayHelloBack(PolitePerson person){
             System.out.format("%s: %s " + "has said hello back to me! %n", this.name, person.getName());
         }
     }
