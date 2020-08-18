@@ -6,17 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="polymorphismAug052020" />
-        <module name="ThreadCountDownAug112020" />
-        <module name="compositionAug052020" />
-        <module name="maven-java-fundamental" />
+        <module name="LambdaAug172020" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="compositionAug052020" target="1.5" />
-      <module name="maven-java-fundamental" target="1.5" />
-      <module name="polymorphismAug052020" target="1.5" />
-      <module name="ThreadCountDownAug112020" target="8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

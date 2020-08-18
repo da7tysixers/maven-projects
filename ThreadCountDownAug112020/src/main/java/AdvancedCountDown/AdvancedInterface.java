@@ -1,6 +1,6 @@
 package AdvancedCountDown;
 
-interface AdvancedInterface {
+public interface AdvancedInterface {
 
     int getTime();
 }
