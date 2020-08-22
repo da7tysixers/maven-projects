@@ -1,10 +1,8 @@
-import javafx.print.Collation;
-
 import java.util.*;
 
-public class Theatre {
+public class Theatre  {
     private final String theatreName;
-    private Collection<Seat> seats = new LinkedHashSet<Seat>() ;
+    private List<Seat> seats = new ArrayList<Seat>();
 
     public Theatre(String theatreName, int numRows, int seatsPerRow) {
         this.theatreName = theatreName;
@@ -26,19 +24,23 @@ public class Theatre {
 
 
     public boolean reserveSeat(String seatNumber) {
-        Seat requestSeat = null;
-        for (Seat seat : seats) {
-            if (seat.getSeatNumber().equals(seatNumber)) {
-                requestSeat = seat;
-                break;
+        int low = 0;
+        int high = seats.size() -1;
+        while (low <= high){
+            System.out.print(".");
+            int mid = (low + high)/2;
+            Seat midVal = seats.get(mid);
+            int cmp = midVal.getSeatNumber().compareToIgnoreCase(seatNumber);
+            if (cmp < 0){
+                low = mid +1;
+            }else if (cmp > 0){
+                high = mid -1;
+            }else {
+                return  seats.get(mid).reserve();
             }
         }
-            if (requestSeat == null) {
-                System.out.println("There is no more seat " + seatNumber);
-                return false;
-            }
-
-        return requestSeat.reserve();
+        System.out.println("There is no reserve " + seatNumber);
+        return false;
     }
 
     public void getSeats(){
@@ -48,7 +50,7 @@ public class Theatre {
     }
 
 
-    private class Seat {
+    private class Seat implements Comparable<Seat> {
         private final String seatNumber;
         private boolean reserved = false;
 
@@ -78,6 +80,10 @@ public class Theatre {
 
         public String getSeatNumber() {
             return seatNumber;
+        }
+
+        public int compareTo(Seat seat) {
+            return this.seatNumber.compareToIgnoreCase(seat.getSeatNumber());
         }
     }
 
