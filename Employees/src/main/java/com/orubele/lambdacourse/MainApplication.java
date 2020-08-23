@@ -3,10 +3,7 @@ package com.orubele.lambdacourse;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.function.Function;
-import java.util.function.IntPredicate;
-import java.util.function.Predicate;
-import java.util.function.Supplier;
+import java.util.function.*;
 
 public class MainApplication {
     public static void main(String[] args) {
@@ -62,6 +59,7 @@ public class MainApplication {
             return employee.getName().substring(0,employee.getName().indexOf(' '));
         };
 
+
         System.out.println("=========================");
         employees.forEach(employee -> {
             String lastName = employee.getName().substring(employee.getName().indexOf(' ') + 1);
@@ -76,6 +74,26 @@ public class MainApplication {
                 System.out.println(getAName(employeeFirstName, employee));
             }
         }
+        
+        Function<Employee, String> upperCase = employee -> employee.getName().toUpperCase();
+        Function<String,String> getUpperFirstname = name -> name.substring(0, name.indexOf(' '));
+        Function chainedFunction =  upperCase.andThen(getUpperFirstname);
+        System.out.println(chainedFunction.apply(employees.get(0)));
+
+        // BiFunction interface that accepts two argument.
+        BiFunction<String, Employee, String> concat = (String name, Employee employee) -> {
+            return name.concat(" " + employee.getAge());
+        };
+
+        String name = upperCase.apply(employees.get(0));
+        System.out.println(concat.apply(name, employees.get(0)));
+
+        Predicate<String> name2 =  namez -> namez.equals("John");
+        boolean answer = name2.test(employees.get(0).getName());
+        System.out.println(answer);
+
+        IntUnaryOperator incBy5 = i -> i + 5;
+        System.out.println(incBy5.applyAsInt(20));
 
     }//main
 
