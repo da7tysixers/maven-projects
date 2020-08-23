@@ -12,6 +12,8 @@ public class MainApplication {
         printList(theatre.seats);
         Theatre.Seat max = Collections.max(theatre.seats);
         System.out.println(max.getSeatNumber());
+        sortList(theatre.seats);
+        printList(theatre.seats);
 
 
     }
@@ -22,5 +24,15 @@ public class MainApplication {
         }
         System.out.println();
         System.out.println("===============================================");
+    }
+
+
+    public static void sortList(List<? extends  Theatre.Seat> list){
+        for (int i = 0; i < list.size() ; i++) {
+            for (int j = i +1; j < list.size() ; j++) {
+                Collections.swap(list, i, j);
+            }
+
+        }
     }
 }
