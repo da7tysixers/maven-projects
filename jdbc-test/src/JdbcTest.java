@@ -11,7 +11,7 @@ public class JdbcTest {
 		Connection conn = null;
 		Statement statement = null;
 		ResultSet result = null;
-		String url = "jdbc:mysql://localhost:3306/demo";
+		String url = "jdbc:mysql://localhost:3306/demo?useSSL=false";
 		String username = "student";
 		String password = "student";
 		
