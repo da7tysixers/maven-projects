@@ -37,7 +37,7 @@ public class TransactionsMain {
 			
 			//Transcation Two set salaries to 300000 for all engineering.
 			myStmt.executeUpdate("update employees set salary=300000 where department = 'Engineering'");
-			System.out.println("Transaction steps are ready");
+			System.out.println("\nTransaction steps are ready");
 			
 			boolean ok = askUserIfOkToSave();
 			
@@ -64,7 +64,16 @@ public class TransactionsMain {
 	}
 
 	private static boolean askUserIfOkToSave() {
-		return false;
+		Scanner input = new Scanner(System.in);
+		System.out.println("Is it okay to save? yes/no");
+		String userResponse = input.nextLine();
+		if (userResponse.equalsIgnoreCase("yes")) {
+			input.close();
+			return true;
+		}else {
+			input.close();
+			return false;
+		}
 	}
 
 	private static void showSalaries(Connection myConn, Statement myStmt, String dept) throws SQLException {
