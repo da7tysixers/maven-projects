@@ -1,6 +1,12 @@
 package com.orubele.spring;
 
 public class TrackCoach implements Coach {
+	
+	private FortuneService fortuneService;
+	
+	public TrackCoach(com.orubele.spring.FortuneService fortuneService) {
+		this.fortuneService = fortuneService;
+	}
 
 	@Override
 	public String getDailyWorkout() {
@@ -8,8 +14,8 @@ public class TrackCoach implements Coach {
 	}
 
 	@Override
-	public String startRun() {
-		return "Run track for 200 meters and stop.";
+	public String getDailyFortune() {
+		return "Just Do It: " +  fortuneService.getFortune();
 	}
 
 }

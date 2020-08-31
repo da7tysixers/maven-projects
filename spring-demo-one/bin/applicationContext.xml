@@ -8,8 +8,16 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
     
     <!-- bean definitions here -->
+    
+    <bean id="myFortune" 
+      class="com.orubele.spring.HappyFortuneService">
+    
+    </bean>
     <bean id = "myCoach"
-    	class="com.orubele.spring.BasketballCoach">
+       class="com.orubele.spring.TrackCoach">
+       
+    	<!-- set up constructor injection-->
+    	<constructor-arg ref="myFortune"/>
     </bean>
 
 </beans>
