@@ -19,5 +19,16 @@
     	<!-- set up constructor injection-->
     	<constructor-arg ref="myFortune"/>
     </bean>
+    
+    <bean id="myCricketCoach"
+    	class="com.orubele.spring.CricketCoach">
+    	<!-- set up setter injection -->
+    	<property name="fortuneService" ref="myFortune" />
+    	
+    	<!-- inject literal values -->
+    	<property name="emailAddress" value ="emmanuel@gmail.com" />
+    	<property name="team" value="Green House" />
+    	
+    </bean>
 
 </beans>
