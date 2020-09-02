@@ -14,7 +14,7 @@
     
     </bean>
     <bean id = "myCoach"
-       class="com.orubele.spring.TrackCoach"
+       class="com.orubele.spring.BaseBallCoach"
        scope="prototype">
        
     	<!-- set up constructor injection-->
