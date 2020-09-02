@@ -1,3 +1,4 @@
+import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -7,7 +8,17 @@ import java.sql.ResultSet;
 
 public class JdbcTest {
 	
-	public static void main(String[] args) {
+	
+	public static void main(String args[]) {
+		
+		Integer num1 = new Integer(1);
+		Integer num2 = num1;
+		num1+= 1;
+		System.out.println(num1);
+		System.out.println(num2);
+		
+		System.out.println(num2);
+		
 		Connection conn = null;
 		Statement statement = null;
 		ResultSet result = null;
