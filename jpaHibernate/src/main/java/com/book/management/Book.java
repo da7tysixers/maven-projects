@@ -41,6 +41,51 @@ public class Book {
 	public float getPrice() {
 		return price;
 	}
+	@Override
+	public String toString() {
+		return "Book [bookId=" + bookId + ", title=" + title + ", author=" + author + ", price=" + price
+				+ ", getBookId()=" + getBookId() + ", getTitle()=" + getTitle() + ", getAuthor()=" + getAuthor()
+				+ ", getPrice()=" + getPrice() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
+				+ ", toString()=" + super.toString() + "]";
+	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((author == null) ? 0 : author.hashCode());
+		result = prime * result + ((bookId == null) ? 0 : bookId.hashCode());
+		result = prime * result + Float.floatToIntBits(price);
+		result = prime * result + ((title == null) ? 0 : title.hashCode());
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Book other = (Book) obj;
+		if (author == null) {
+			if (other.author != null)
+				return false;
+		} else if (!author.equals(other.author))
+			return false;
+		if (bookId == null) {
+			if (other.bookId != null)
+				return false;
+		} else if (!bookId.equals(other.bookId))
+			return false;
+		if (Float.floatToIntBits(price) != Float.floatToIntBits(other.price))
+			return false;
+		if (title == null) {
+			if (other.title != null)
+				return false;
+		} else if (!title.equals(other.title))
+			return false;
+		return true;
+	}
 	
 
 }
