@@ -4,7 +4,7 @@ public class TrackCoach implements Coach {
 	
 	private FortuneService fortuneService;
 	
-	public TrackCoach(com.orubele.spring.FortuneService fortuneService) {
+	public TrackCoach(FortuneService fortuneService) {
 		this.fortuneService = fortuneService;
 	}
 
@@ -23,7 +23,7 @@ public class TrackCoach implements Coach {
 		System.out.println("TrackCoach: inside method doMyStartupStuff");
 	}
 	
-	//add a estroy method
+	//add a destroy method
 	public void doMyCleanupStuff() {
 		System.out.println("TrackCoach: inside method doMyCleanupStuffYoYo");
 	}

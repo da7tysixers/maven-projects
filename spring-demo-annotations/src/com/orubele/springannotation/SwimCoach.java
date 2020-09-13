@@ -15,7 +15,7 @@ public class SwimCoach implements Coach {
 	}
 	
 	@Autowired
-	@Qualifier("fileFortuneService")
+	@Qualifier("randomFortuneService")
 	private FortuneService fortuneService;
 	
 	@Value("${foo.email}")
