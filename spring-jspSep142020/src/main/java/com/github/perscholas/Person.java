@@ -2,6 +2,7 @@ package com.github.perscholas;
 
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 public class Person {
@@ -15,6 +16,19 @@ public class Person {
 
     @Column(name = "last_name", length = 50)
     private String lastName;
+
+
+    @Column(name = "birth_date")
+    private Date birthDate;
+
+    public Date getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
+    }
+
 
     public Long getId() {
         return id;
