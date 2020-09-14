@@ -1,17 +1,24 @@
 package com.orubele.javadependency;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class FootballCoach implements Coach {
+	
+	private FortuneService fortuneService;
+
+	public FootballCoach(FortuneService theFortuneService) {
+		fortuneService = theFortuneService;
+	}
 
 	@Override
 	public String getDailyWorkout() {
-		// TODO Auto-generated method stub
-		return null;
+		return "From the Football coach daily workout";
 	}
 
 	@Override
 	public String getDailyFortune() {
-		// TODO Auto-generated method stub
-		return null;
+		return fortuneService.fortune();
 	}
 
 }
