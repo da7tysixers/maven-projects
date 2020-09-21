@@ -32,10 +32,7 @@ public class HelloWorldController {
 	public String letShoutDude(HttpServletRequest request, Model model) {
 		// read the request parameter from the HTML form
 		String theName = request.getParameter("studentName");
-		// convert the data to all caps
-		//theName.toUpperCase();
 		
-		// create the message
 		String result = "Yo! " + theName.toUpperCase();
 		
 		
