@@ -6,8 +6,6 @@ public class Human {
 	private String eyeColor;
 	
 	
-	
-	
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -28,6 +26,26 @@ public class Human {
 	}
 	
 	
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public int getAge() {
+		return age;
+	}
+
+
+	public int getHeightInInches() {
+		return heightInInches;
+	}
+
+
+	public String getEyeColor() {
+		return eyeColor;
+	}
 
 
 	public void speak() {
