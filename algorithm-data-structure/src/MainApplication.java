@@ -5,6 +5,6 @@ public class MainApplication {
 		
 		Human male = new Human();
 		
-		System.out.println(male.eyeColor);
+		System.out.println();
 	}
 }
