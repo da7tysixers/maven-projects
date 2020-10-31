@@ -4,14 +4,13 @@ public class Monkey implements Animal {
 
 	@Override
 	public void age() {
-		// TODO Auto-generated method stub
+		System.out.println("I am 10 years old");
 
 	}
 
 	@Override
 	public void eat() {
-		// TODO Auto-generated method stub
-
+		System.out.println("Monkey eating...");
 	}
 
 	@Override
