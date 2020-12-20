@@ -10,5 +10,17 @@ public class App {
 		myQueue.insert(44);
 		
 		myQueue.view();
+		
+		System.out.println();
+		myQueue.remove();
+		myQueue.remove();
+		
+		myQueue.remove();
+	
+		System.out.println("#############");
+		myQueue.insert(9999);
+		myQueue.remove();
+		myQueue.view();
+		
 	}
 }

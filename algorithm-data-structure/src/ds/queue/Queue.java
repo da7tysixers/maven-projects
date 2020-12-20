@@ -18,18 +18,33 @@ public class Queue {
 	
 	
 	public void insert(long j) {
+		if(rear == maxSize - 1) {
+			rear = -1;
+		}
 		rear++;
 		this.queArray[rear] = j;
 		this.nItems++;
 	}
 	public long remove() {
 		long temp = this.queArray[front];
+		queArray[front] = 0;
 		front++;
 		if(front == maxSize) {
 			front = 0; // rest front to zero
 		}
 		nItems--;
+		System.out.println(temp);
 		return temp;
+	}
+	
+	
+	
+	public boolean isEmpty() {
+		return (nItems == 0);
+	}
+	
+	public boolean isFull() {
+		return (nItems == maxSize);
 	}
 	
 	
