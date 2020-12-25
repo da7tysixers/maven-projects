@@ -20,7 +20,7 @@ public class Queue {
 	public void insert(long j) {
 		if(rear == maxSize - 1) {
 			rear = -1;
-		}
+		}// this condition is refer to as circular queue because it overides the last in queue.
 		rear++;
 		this.queArray[rear] = j;
 		this.nItems++;
