@@ -8,17 +8,33 @@ public class App {
 		
 		Node nodeB = new Node();
 		nodeB.data = 3;
-		nodeA.next = nodeB;
+		
 		
 		
 		Node nodeC = new Node();
 		nodeC.data = 7;
-		nodeB.next = nodeC;
 		
 		Node nodeD = new Node();
 		nodeD.data = 8;
-		nodeC.next = nodeD;
 		
+		nodeA.next = nodeB;
+		nodeB.next = nodeC;
+		nodeC.next = nodeD;
+
+		
+		System.out.println(listLength(nodeA));//4
+		System.out.println(listLength(nodeB));//3
+		
+	}
+	
+	public static int listLength(Node node) {
+		int counter = 0;
+		Node currentNode = node;
+		while(currentNode != null) {
+			counter++;
+			currentNode = currentNode.next;
+		}
+		return counter;
 	}
 
 }
